@@ -436,6 +436,122 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
+
+        /*-------------------------------------------------*/
+        /*Nova implementação da section habilidades*/
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Estilo para as abas */
+        .nav-pills .nav-link {
+            margin-right: 5px;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+
+        /* Barras de habilidades */
+        .skill-bar-container {
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .skill-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Estilo para os cards */
+        .skill-item {
+            transition: all 0.3s ease;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+
+        /* Estilo para os cards de certificados */
+        .certificate-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-preview {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #f8f9fa;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-thumbnail {
+            transition: all 0.5s ease;
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+
+        .certificate-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-preview:hover .certificate-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -514,32 +630,351 @@
         <section id="habilidades" class="py-5 bg-light">
             <div class="container">
                 <h2 class="section-title">Minhas Habilidades</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card skill-item">
-                            <div class="card-body text-center">
-                                <i class="fas fa-code fa-3x mb-3 text-primary-custom"></i>
-                                <h5 class="card-title">HTML/CSS/SCSS</h5>
-                                <p class="card-text">Layouts responsivos e estilização moderna.</p>
+
+                <!-- Abas para categorizar habilidades -->
+                <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-dev-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-dev" type="button" role="tab" aria-selected="true">Desenvolvimento
+                            Web</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-ai-tab" data-bs-toggle="pill" data-bs-target="#pills-ai"
+                            type="button" role="tab" aria-selected="false">Inteligência Artificial</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-design-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-design" type="button" role="tab"
+                            aria-selected="false">Design</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-cert-tab" data-bs-toggle="pill" data-bs-target="#pills-cert"
+                            type="button" role="tab" aria-selected="false">Certificações</button>
+                    </li>
+                </ul>
+
+                <!-- Conteúdo das abas -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- Habilidades de Desenvolvimento -->
+                    <div class="tab-pane fade show active" id="pills-dev" role="tabpanel"
+                        aria-labelledby="pills-dev-tab">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-code fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">HTML/CSS/SCSS</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 95%"></div>
+                                        </div>
+                                        <p class="card-text">Layouts responsivos e estilização moderna.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fab fa-js fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">JavaScript/jQuery</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 85%"></div>
+                                        </div>
+                                        <p class="card-text">Interatividade e dinamismo em aplicações web.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fab fa-bootstrap fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Bootstrap</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 90%"></div>
+                                        </div>
+                                        <p class="card-text">Designs rápidos e adaptáveis com Bootstrap 5.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fab fa-react fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">React Básico</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 65%"></div>
+                                        </div>
+                                        <p class="card-text">Desenvolvimento de interfaces com React.</p>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <!--<div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-database fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">SQL Básico</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 70%"></div>
+                                        </div>
+                                        <p class="card-text">Manipulação de bancos de dados relacionais.</p>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-mobile-alt fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Responsive Design</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 90%"></div>
+                                        </div>
+                                        <p class="card-text">Interfaces adaptáveis a todos os dispositivos.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card skill-item">
-                            <div class="card-body text-center">
-                                <i class="fab fa-js fa-3x mb-3 text-primary-custom"></i>
-                                <h5 class="card-title">javaScript/jQuery</h5>
-                                <p class="card-text">Interatividade e dinamismo em aplicações web.</p>
+
+                    <!-- Habilidades de IA -->
+                    <div class="tab-pane fade" id="pills-ai" role="tabpanel" aria-labelledby="pills-ai-tab">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-robot fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Prompt Engineering</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 85%"></div>
+                                        </div>
+                                        <p class="card-text">Criação de prompts eficientes com LLMs como ChatGPT,
+                                            DeepSeek, Claude e Grok, no
+                                            desenvolvimento web assistido por IA.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-brain fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Uso de APIs de IA</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 75%"></div>
+                                        </div>
+                                        <p class="card-text">Integração de APIs de IA em aplicações web.</p>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-image fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Geração de Imagens</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 80%"></div>
+                                        </div>
+                                        <p class="card-text">Criação de imagens com modelos generativos como DALL-E
+                                            (OpenAI), Leonardo, Adobe Firefly, dentre outros. <i>Curso IA Art em
+                                                andamento...</i> .</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card skill-item">
-                            <div class="card-body text-center">
-                                <i class="fab fa-bootstrap fa-3x mb-3 text-primary-custom"></i>
-                                <h5 class="card-title">Bootstrap</h5>
-                                <p class="card-text">Designs rápidos e adaptáveis com Bootstrap 5.</p>
+
+                    <!-- Habilidades de Design -->
+                    <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab">
+                        <div class="row">
+                            <!--<div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-paint-brush fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Ilustração Digital</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 80%"></div>
+                                        </div>
+                                        <p class="card-text">Criação de ilustrações digitais para web e publicidade.</p>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <!--<div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="far fa-object-group fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">UI/UX Básico</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 75%"></div>
+                                        </div>
+                                        <p class="card-text">Design de interfaces e experiência do usuário.</p>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="col-md-4 mb-4">
+                                <div class="card skill-item">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-pen-fancy fa-3x mb-3 text-primary-custom"></i>
+                                        <h5 class="card-title">Design</h5>
+                                        <div class="skill-bar-container">
+                                            <div class="skill-bar" style="width: 85%"></div>
+                                        </div>
+                                        <p class="card-text">Elaboração de templates criativos, despertados pelo desenho
+                                            artístico e publicitário.</p>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificações -->
+                    <div class="tab-pane fade" id="pills-cert" role="tabpanel" aria-labelledby="pills-cert-tab">
+                        <div class="row certificate-gallery">
+                            <div class="col-md-6 mb-4">
+                                <div class="card certificate-card">
+                                    <div class="card-body">
+                                        <div class="certificate-preview mb-3">
+                                            <div class="text-center p-4 bg-light">
+                                                <i class="fas fa-certificate fa-4x text-primary-custom"></i>
+                                                <p class="mt-2 mb-0"><img
+                                                        src="./image/certificadosWebDev/certifJavaScriptTrybe.png"
+                                                        alt="Imagem de um certificado" class="img-fluid"></p>
+                                            </div>
+                                            <div class="certificate-overlay">
+                                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#certModal1">Ver Certificado</button>
+                                            </div>
+                                        </div>
+                                        <h5 class="card-title">Desenvolvimento Web Full Stack</h5>
+                                        <p class="card-text">Trybe, 2023</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-success">Verificado</span>
+                                            <a href="https://betrybe.com/badges/756EA5E91CDB" class="text-primary small"
+                                                target="_blank">Ver credencial <i
+                                                    class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card certificate-card">
+                                    <div class="card-body">
+                                        <div class="certificate-preview mb-3">
+                                            <div class="text-center p-4 bg-light">
+                                                <i class="fas fa-robot fa-4x text-primary-custom"></i>
+                                                <p class="mt-2 mb-0"><img
+                                                        src="./image/certificadosWebDev/iaNaPraticaTrybe.jpg"
+                                                        alt="Certificado" class="img-fluid"></p>
+                                            </div>
+                                            <div class="certificate-overlay">
+                                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#certModal2">Ver Certificado</button>
+                                            </div>
+                                        </div>
+                                        <h5 class="card-title">Engenharia de Prompt e IA Generativa</h5>
+                                        <p class="card-text">Trybe, 2024</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-success">Verificado</span>
+                                            <a href="https://betrybe.com/badges/3D130F9B5376" class="text-primary small"
+                                                target="_blank">Ver credencial <i
+                                                    class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card certificate-card">
+                                    <div class="card-body">
+                                        <div class="certificate-preview mb-3">
+                                            <div class="text-center p-4 bg-light">
+                                                <i class="fas fa-paint-brush fa-4x text-primary-custom"></i>
+                                                <p class="mt-2 mb-0"><img
+                                                        src="./image/certificadosDesign/desenhoArtísticoEpublicitario.jpeg"
+                                                        alt="Certificado" class="img-fluid"></p>
+                                            </div>
+                                            <div class="certificate-overlay">
+                                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#certModal3">Ver Certificado</button>
+                                            </div>
+                                        </div>
+                                        <h5 class="card-title">Desenho Artístico e Publicitário</h5>
+                                        <p class="card-text">Instituto Padre Reus, 1988</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <!--<span class="badge bg-success">Verificado</span>-->
+                                            <!--<a href="#" class="text-primary small" target="_blank">Ver credencial <i
+                                                    class="fas fa-external-link-alt"></i></a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modals para os certificados -->
+            <div class="modal fade" id="certModal1" tabindex="-1" aria-labelledby="certModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="certModalLabel1">Certificado de Desenvolvimento Web Full Stack
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="p-5 bg-light">
+                                <i class="fas fa-certificate fa-5x text-primary-custom"></i>
+                                <p class="mt-3"><img src="./image/certificadosWebDev/certifJavaScriptTrybe.png"
+                                        alt="Imagem de um certificado" class="img-fluid">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <a href="#" class="btn btn-primary" target="_blank">Ver Credencial Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="certModal2" tabindex="-1" aria-labelledby="certModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="certModalLabel2">Certificado em Engenharia de Prompt e IA
+                                Generativa
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="p-5 bg-light">
+                                <i class="fas fa-robot fa-5x text-primary-custom"></i>
+                                <p class="mt-3"><img src="./image/certificadosWebDev/iaNaPraticaTrybe.jpg"
+                                        alt="Certificado" class="img-fluid"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <a href="#" class="btn btn-primary" target="_blank">Ver Credencial Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="certModal3" tabindex="-1" aria-labelledby="certModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="certModalLabel3">Certificado de Desenho Artístico e Publicitário
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="p-5 bg-light">
+                                <i class="fas fa-paint-brush fa-5x text-primary-custom"></i>
+                                <p class="mt-3"><img src="./image/certificadosDesign/desenhoArtísticoEpublicitario.jpeg"
+                                        alt="Certificado" class="img-fluid"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <!--<a href="#" class="btn btn-primary" target="_blank">Ver Credencial Online</a>-->
                         </div>
                     </div>
                 </div>
