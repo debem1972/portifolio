@@ -229,6 +229,15 @@
             background-color: var(--primary-color);
         }
 
+        .tooltip {
+            z-index: 9999;
+            /* Bem alto para aparecer sobre tudo */
+            pointer-events: auto;
+            /* Garante que o mouse interaja se necessário */
+        }
+
+
+
         .skill-item {
             transition: transform 0.3s;
         }
@@ -239,14 +248,17 @@
 
         .project-card {
             overflow: hidden;
+            /*overflow: visible;*/
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            /*position: relative;
+            z-index: 1;*/
         }
 
-        .project-card:hover {
+        /*.project-card:hover {
             transform: translateY(-5px);
-        }
+        }*/
 
         .project-card img {
             transition: transform 0.3s;
@@ -255,6 +267,12 @@
         .project-card:hover img {
             transform: scale(1.05);
         }
+
+        /*.card a.btn {
+            position: relative;
+            z-index: 2;
+            /* Opcional: traz o botão para frente se necessário */
+        /* }*/
 
 
 
@@ -467,7 +485,9 @@
             <div class="container text-center">
                 <h1 class="mb-4"><span class="text-highlight">Daniel Lopes Bemfica</span></h1>
                 <p class="lead mb-4">Desenvolvedor Front-End Apaixonado por Soluções Criativas</p>
-                <a href="#contato" class="btn btn-light btn-lg">Entre em Contato</a>
+                <a href="#contato" class="btn btn-light btn-lg" data-bs-toggle="tooltip"
+                    data-bs-title="Clique aqui e vá direto ao meu whatsapp!" data-bs-placement="bottom">Entre em
+                    Contato</a>
             </div>
         </section>
 
@@ -546,8 +566,7 @@
                                         para outros navegadores. Mais novidades por vir!"</i></p>
                                 <a href="https://debem1972.github.io/todoListTurbinado/" target="_blank"
                                     rel="noopener noreferrer" aria-label="Ver Projeto To-Do App (abre em nova aba)"
-                                    data-bs-toggle="tooltip" data-bs-title="Abre em outra página!"
-                                    class=" btn btn-primary">Ver
+                                    title="Abrirá uma página em outra aba!" class=" btn btn-primary">Ver
                                     Projeto</a>
                             </div>
                         </div>
@@ -558,7 +577,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">Projeto 2</h5>
                                 <p class="card-text">Uma breve descrição do projeto e das tecnologias utilizadas.</p>
-                                <a href="#" class="btn btn-primary">Ver Projeto</a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Ver Projeto To-Do App (abre em nova aba)"
+                                    title="Abrirá uma página em outra aba!" class="btn btn-primary">Ver Projeto</a>
                             </div>
                         </div>
                     </div>
@@ -568,7 +589,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">Projeto 3</h5>
                                 <p class="card-text">Uma breve descrição do projeto e das tecnologias utilizadas.</p>
-                                <a href="#" class="btn btn-primary">Ver Projeto</a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Ver Projeto To-Do App (abre em nova aba)"
+                                    title="Abrirá uma página em outra aba!" class="btn btn-primary">Ver Projeto</a>
                             </div>
                         </div>
                     </div>
