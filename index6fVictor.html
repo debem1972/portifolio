@@ -1040,17 +1040,22 @@
                 <h2 class="section-title">Entre em Contato</h2>
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <form>
+                        <form action="https://formsubmit.co/danielbemficadev@gmail.com" method="POST">
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Seu Nome">
+                                <input type="text" name="nome" class="form-control" placeholder="Seu Nome" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Seu Email">
+                                <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Sua Mensagem"></textarea>
+                                <textarea name="mensagem" class="form-control" rows="4" placeholder="Sua Mensagem"
+                                    required></textarea>
                             </div>
+                            <!-- Campo oculto para evitar spam -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!--<input type="hidden" name="_next" value="https://seusite.com/agradecimento.html">-->
                             <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                            <!--<div id="statusMensagem" class="mt-3"></div>-->
                         </form>
                     </div>
                     <div class="col-md-6">
