@@ -229,12 +229,16 @@
             background-color: var(--primary-color);
         }
 
-        .tooltip {
+        .list-unstyled li {
+            cursor: pointer;
+        }
+
+        /*.tooltip {
             z-index: 9999;
             /* Bem alto para aparecer sobre tudo */
-            pointer-events: auto;
+        /* pointer-events: auto;
             /* Garante que o mouse interaja se necessário */
-        }
+        /*}*/
 
 
 
@@ -1063,7 +1067,7 @@
                         <p>Sinta-se à vontade para entrar em contato comigo para discutir oportunidades de trabalho,
                             colaborações ou apenas para trocar ideias sobre desenvolvimento web.</p>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-envelope me-2"></i> debem1972@gmail.com</li>
+                            <li id="emailCopy"><i class="fas fa-envelope me-2"></i> debem1972@gmail.com</li>
                             <li><i class="fas fa-phone me-2"></i> (51) 99204-1896</li>
                             <li><i class="fas fa-map-marker-alt me-2"></i> Imbé, RS</li>
                         </ul>
@@ -1072,6 +1076,14 @@
                             <a href="#" class="me-3 text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
                             <a href="#" class="text-dark"><i class="fab fa-instagram fa-2x"></i></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!--Toast de aviso da cópia do email-->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="emailToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-body">
+                        Email copiado para a área de transferência!
                     </div>
                 </div>
             </div>

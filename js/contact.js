@@ -131,3 +131,30 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
             }, 3000);
         });
 });
+
+//------------------------------------------------------------------------------
+//Config do toast de aviso de copia do email.
+// Seleciona o elemento do email
+const emailElement = document.getElementById('emailCopy');
+
+// Inicializa o toast do Bootstrap
+const toastEl = document.getElementById('emailToast');
+const toast = new bootstrap.Toast(toastEl);
+
+// Adiciona o evento de clique
+emailElement.addEventListener('click', function () {
+    // Copia o email para a área de transferência
+    const email = 'debem1972@gmail.com';
+    navigator.clipboard.writeText(email)
+        .then(() => {
+            // Mostra o toast
+            toast.show();
+        })
+        .catch(err => {
+            console.error('Erro ao copiar o email: ', err);
+        });
+});
+
+//---------------------------------------------------------------------------
+
+
