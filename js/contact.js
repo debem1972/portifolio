@@ -18,6 +18,11 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
             if (response.ok) {
                 statusEl.innerHTML = '<div class="alert alert-success">Mensagem enviada com sucesso! Obrigado pelo contato.</div>';
                 document.getElementById('meuFormulario').reset(); // Limpa o formulário
+
+                setTimeout(() => {
+                    statusEl.style.display = "none";
+                }, 3000);
+
             } else {
                 throw new Error('Falha ao enviar');
             }
@@ -25,5 +30,10 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
         .catch(error => {
             statusEl.innerHTML = '<div class="alert alert-danger">Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.</div>';
             console.error('Erro:', error);
+
+            setTimeout(() => {
+                statusEl.style.display = "none";
+            }, 3000);
+
         });
 });
