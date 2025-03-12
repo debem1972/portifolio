@@ -233,6 +233,17 @@
             cursor: pointer;
         }
 
+        .list-unstyled .contactMethod {
+            transition: 0.7s ease-in-out;
+        }
+
+        .list-unstyled .contactMethod:hover {
+            font-style: 600;
+            transform: scale(1.1);
+            color: var(--highlight-color);
+            margin-left: 10px;
+        }
+
         /*.tooltip {
             z-index: 9999;
             /* Bem alto para aparecer sobre tudo */
@@ -1067,9 +1078,10 @@
                         <p>Sinta-se à vontade para entrar em contato comigo para discutir oportunidades de trabalho,
                             colaborações ou apenas para trocar ideias sobre desenvolvimento web.</p>
                         <ul class="list-unstyled">
-                            <li id="emailCopy"><i class="fas fa-envelope me-2"></i> debem1972@gmail.com</li>
-                            <li><i class="fas fa-phone me-2"></i> (51) 99204-1896</li>
-                            <li><i class="fas fa-map-marker-alt me-2"></i> Imbé, RS</li>
+                            <li id="emailCopy" class="contactMethod" title="Clique para copiar o endereço de email!"><i
+                                    class="fas fa-envelope me-2"></i> debem1972@gmail.com</li>
+                            <li class="contactMethod"><i class="fas fa-phone me-2"></i> (51) 99204-1896</li>
+                            <li class="contactMethod"><i class="fas fa-map-marker-alt me-2"></i> Imbé, RS</li>
                         </ul>
                         <div class="mt-4">
                             <a href="#" class="me-3 text-dark"><i class="fab fa-github fa-2x"></i></a>

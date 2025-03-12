@@ -137,6 +137,8 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
 // Seleciona o elemento do email
 const emailElement = document.getElementById('emailCopy');
 
+
+
 // Inicializa o toast do Bootstrap
 const toastEl = document.getElementById('emailToast');
 const toast = new bootstrap.Toast(toastEl);
