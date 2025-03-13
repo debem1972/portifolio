@@ -249,7 +249,8 @@
             margin-left: 10px;
         }
 
-        #whatsappLink {
+        #whatsappLink,
+        #telephonLink {
             color: inherit;
             /* Mantém a cor do texto pai (provavelmente preto ou cinza escuro da sua lista) */
             text-decoration: none;
@@ -264,6 +265,16 @@
             text-decoration: none;
             /* Garante que o sublinhado não apareça no hover */
         }
+
+        #telephonLink:hover,
+        #telephonLink:focus,
+        #telephonLink:active {
+            color: inherit;
+            /* Garante que a cor não mude ao passar o mouse ou clicar */
+            text-decoration: none;
+            /* Garante que o sublinhado não apareça no hover */
+        }
+
 
 
 
@@ -1098,7 +1109,12 @@
                                     class="fas fa-envelope me-2"></i> debem1972@gmail.com</li>
                             <li class="contactMethod"
                                 title="Ligue para mim clicando aqui(Método aplicável somente para mobile!)"><i
-                                    class="fas fa-phone me-2"></i> (51) 99204-1896</li>
+                                    class="fas fa-phone me-2"></i>
+                                <!-- O 'tel:' inicia uma chamada em dispositivos móveis -->
+                                <a id="telephonLink" href="tel:+5551992041896">
+                                    (51) 99204-1896
+                                </a>
+                            </li>
                             <li class="contactMethod" title="Fale comigo pelo Whatsapp"><i
                                     class="fab fa-whatsapp me-2"></i> <a id="whatsappLink"
                                     href="https://wa.me/5551992041896?text=Oi,%20Daniel!%20Quero%20falar%20sobre%20um%20projeto.%20Pode%20me%20retornar?"
