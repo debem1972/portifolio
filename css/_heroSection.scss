@@ -1,0 +1,9 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}

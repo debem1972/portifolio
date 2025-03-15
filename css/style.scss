@@ -37,7 +37,7 @@ body {
     text-shadow: var(--sombra-color);
 }
 
-.hero {
+/*.hero {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -45,7 +45,8 @@ body {
     color: white;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-}
+}*/
+@import "./heroSection";
 
 
 /* Estilo base para desktop */
