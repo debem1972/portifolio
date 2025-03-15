@@ -1,0 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    /* Adiciona padding-top para compensar a altura da navbar fixa */
+    padding-top: 56px;
+    overflow-x: hidden;
+}

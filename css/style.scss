@@ -8,7 +8,7 @@
 }*/
 @import "./colors";
 
-html {
+/*html {
     scroll-behavior: smooth;
 }
 
@@ -18,9 +18,11 @@ body {
     margin: 0;
     padding: 0;
     /* Adiciona padding-top para compensar a altura da navbar fixa */
-    padding-top: 56px;
+/*padding-top: 56px;
     overflow-x: hidden;
-}
+}*/
+
+@import "./htmlBody";
 
 .bg-primary-custom {
     background-color: var(--primary-color);
