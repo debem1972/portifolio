@@ -1,0 +1,33 @@
+/*Alinhando os parâmetros dos breakpoints do projeto aos parâmetros dos breakpoints do bootstrap*/
+$breakpoints: (
+    'xs': 0px,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+);
+
+@function breakpoint($key) {
+    @return map-get($breakpoints, $key);
+}
+
+/*------------------------------------------------------*/
+/*Breakpoints da imagem da foto*/
+/* Tablets (de 768px até 991px) */
+@media (min-width:'md') {
+    .myPhoto img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Desktops (a partir de 992px) */
+@media (min-width:'lg') {
+    .myPhoto img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*-----------------------------------------------------*/

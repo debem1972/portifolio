@@ -131,20 +131,22 @@ body {
 
 /*Breakpoints da imagem da foto*/
 /* Tablets (de 768px até 991px) */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .myPhoto img {
         width: 80px;
         height: 80px;
     }
-}
+}*/
 
 /* Desktops (a partir de 992px) */
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     .myPhoto img {
         width: 100px;
         height: 100px;
     }
-}
+}*/
+
+@import './breakPoints';
 
 /*--------------------------------------------*/
 /*Ajuste da fonte do navbar-brand*/

@@ -225,19 +225,37 @@ body {
 
 /*Breakpoints da imagem da foto*/
 /* Tablets (de 768px até 991px) */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
+    .myPhoto img {
+        width: 80px;
+        height: 80px;
+    }
+}*/
+/* Desktops (a partir de 992px) */
+/*@media (min-width: 992px) {
+    .myPhoto img {
+        width: 100px;
+        height: 100px;
+    }
+}*/
+/*Alinhando os parâmetros dos breakpoints do projeto aos parâmetros dos breakpoints do bootstrap*/
+/*------------------------------------------------------*/
+/*Breakpoints da imagem da foto*/
+/* Tablets (de 768px até 991px) */
+@media (min-width: md) {
   .myPhoto img {
     width: 80px;
     height: 80px;
   }
 }
 /* Desktops (a partir de 992px) */
-@media (min-width: 992px) {
+@media (min-width: lg) {
   .myPhoto img {
     width: 100px;
     height: 100px;
   }
 }
+/*-----------------------------------------------------*/
 /*--------------------------------------------*/
 /*Ajuste da fonte do navbar-brand*/
 /* Estilização padrão para dispositivos móveis (até 767px) */
