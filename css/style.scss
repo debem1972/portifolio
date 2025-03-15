@@ -24,18 +24,20 @@ body {
 
 @import "./htmlBody";
 
+/* Estilos de classes do nav*/
 .bg-primary-custom {
     background-color: var(--primary-color);
 }
 
+/*Estilos de classes dentro da section habilidades */
 .text-primary-custom {
     color: var(--primary-color);
 }
 
-.text-highlight {
+/*.text-highlight {
     color: var(--highlight1-color);
     text-shadow: var(--sombra-color);
-}
+}*/
 
 /*.hero {
     height: 100vh;

@@ -22,3 +22,8 @@
     /* Tamanho base para desktop */
     line-height: 1.5;
 }
+
+.text-highlight {
+    color: var(--highlight1-color);
+    text-shadow: var(--sombra-color);
+}
