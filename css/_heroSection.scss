@@ -7,3 +7,18 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
+/* Estilo base para desktop */
+.container.text-center h1 {
+    font-size: 2.5rem;
+    /* Tamanho base para desktop */
+    line-height: 1.2;
+}
+
+
+
+.container.text-center .lead {
+    font-size: 1.25rem;
+    /* Tamanho base para desktop */
+    line-height: 1.5;
+}
