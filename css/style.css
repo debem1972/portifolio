@@ -104,6 +104,63 @@ body {
 }*/
 /*-----------------------------------------*/
 /*Estilização da foto junto do nav*/
+/*.myPhoto {
+    margin: 0 20px 0 10px;
+}
+
+.myPhoto img {
+    border-radius: 50%;
+    border: 2px solid var(--branco-color);
+    width: 60px;
+    height: 60px;
+    box-shadow: 1px 1px 3px var(--sombra-color);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.myPhoto img:hover {
+    transform: scale(1.1);
+    /* Pequeno zoom ao passar o mouse */
+/*}
+
+/* Estilos para a foto ampliada */
+/*#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro semi-transparente */
+/* z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay.active {
+    display: flex;
+}
+
+#enlargedPhoto {
+    max-width: 80%;
+    /* Limita o tamanho máximo */
+/* max-height: 80vh;
+    /* Limita a altura máxima */
+/* border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Sombra para profundidade */
+/*transform: scale(0);
+    /* Inicia invisível */
+/* transition: transform 0.3s ease;
+}
+
+#overlay.active #enlargedPhoto {
+    transform: scale(1);
+    /* Amplia ao ativar */
+/*}
+*/
+/*Estilização da foto junto do nav*/
 .myPhoto {
   margin: 0 20px 0 10px;
 }

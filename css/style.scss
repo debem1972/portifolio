@@ -66,7 +66,7 @@ body {
 
 /*-----------------------------------------*/
 /*Estilização da foto junto do nav*/
-.myPhoto {
+/*.myPhoto {
     margin: 0 20px 0 10px;
 }
 
@@ -83,10 +83,10 @@ body {
 .myPhoto img:hover {
     transform: scale(1.1);
     /* Pequeno zoom ao passar o mouse */
-}
+/*}
 
 /* Estilos para a foto ampliada */
-#overlay {
+/*#overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -95,7 +95,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     /* Fundo escuro semi-transparente */
-    z-index: 1000;
+/* z-index: 1000;
     justify-content: center;
     align-items: center;
 }
@@ -107,21 +107,22 @@ body {
 #enlargedPhoto {
     max-width: 80%;
     /* Limita o tamanho máximo */
-    max-height: 80vh;
+/* max-height: 80vh;
     /* Limita a altura máxima */
-    border-radius: 10px;
+/* border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     /* Sombra para profundidade */
-    transform: scale(0);
+/*transform: scale(0);
     /* Inicia invisível */
-    transition: transform 0.3s ease;
+/* transition: transform 0.3s ease;
 }
 
 #overlay.active #enlargedPhoto {
     transform: scale(1);
     /* Amplia ao ativar */
-}
-
+/*}
+*/
+@import "./minhaFoto";
 
 
 
