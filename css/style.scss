@@ -163,21 +163,22 @@ body {
     text-shadow: 1px 1px 3px var(--sombra-color);
 }
 
+/*Breakpoints para navbar-brands*/
 /* Tablets (de 768px até 991px) */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .navbar-brand {
         font-size: 1.5rem;
         /* 20px, um pouco maior que em mobile */
-    }
-}
+/*}
+}*/
 
 /* Desktops (a partir de 992px) */
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     .navbar-brand {
         font-size: 2.5rem;
         /* 24px, maior em desktops, mas não exagerado */
-    }
-}
+/* }
+}*/
 
 /*--------------------------------------------*/
 /* Melhora a transição quando o menu é expandido */

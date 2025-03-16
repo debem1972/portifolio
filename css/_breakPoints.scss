@@ -13,12 +13,17 @@ $breakpoints: (
 }
 
 /*------------------------------------------------------*/
-/*Breakpoints da imagem da foto*/
+
 /* Tablets (de 768px até 991px) */
 @media (min-width:'md') {
     .myPhoto img {
         width: 80px;
         height: 80px;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        /* 20px, um pouco maior que em mobile */
     }
 }
 
@@ -27,6 +32,11 @@ $breakpoints: (
     .myPhoto img {
         width: 100px;
         height: 100px;
+    }
+
+    .navbar-brand {
+        font-size: 2.5rem;
+        /* 24px, maior em desktops, mas não exagerado */
     }
 }
 
