@@ -358,13 +358,11 @@ section#home.hero {
   justify-content: center;
   align-items: center;
 }
-
 #logo.active {
   display: flex;
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
-
 #logo img {
   width: 100%;
   height: auto;

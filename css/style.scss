@@ -202,21 +202,24 @@ section#home.hero {
     display: none;
     justify-content: center;
     align-items: center;
+
+    &.active {
+        display: flex;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        /* Mudado para 'contain' para manter as proporções exatas */
+        max-width: 100%;
+    }
+
 }
 
-#logo.active {
-    display: flex;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
 
-#logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    /* Mudado para 'contain' para manter as proporções exatas */
-    max-width: 100%;
-}
 
 /*----------------------------------------------------------------------------*/
 /* Media queries para ajuste fino em dispositivos específicos */
