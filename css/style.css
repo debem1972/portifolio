@@ -218,44 +218,33 @@ section#home.hero {
   margin-left: 10px;
 }
 
+/*Agrupamento dos estilos dos id's*/
 #whatsappLink,
 #telephonLink,
 #localizationLink,
 #githubLink,
 #linkedinLink {
   color: inherit;
-  /* Mantém a cor do texto pai (provavelmente preto ou cinza escuro da sua lista) */
   text-decoration: none;
-  /* Remove o sublinhado */
 }
-
-#whatsappLink:hover,
-#whatsappLink:focus,
-#whatsappLink:active {
-  color: inherit;
-  /* Garante que a cor não mude ao passar o mouse ou clicar */
-  text-decoration: none;
-  /* Garante que o sublinhado não apareça no hover */
-}
-
+#whatsappLink:hover, #whatsappLink:focus, #whatsappLink:active,
 #telephonLink:hover,
 #telephonLink:focus,
-#telephonLink:active {
-  color: inherit;
-  /* Garante que a cor não mude ao passar o mouse ou clicar */
-  text-decoration: none;
-  /* Garante que o sublinhado não apareça no hover */
-}
-
+#telephonLink:active,
 #localizationLink:hover,
 #localizationLink:focus,
-#localizationLink:active {
+#localizationLink:active,
+#githubLink:hover,
+#githubLink:focus,
+#githubLink:active,
+#linkedinLink:hover,
+#linkedinLink:focus,
+#linkedinLink:active {
   color: inherit;
-  /* Garante que a cor não mude ao passar o mouse ou clicar */
   text-decoration: none;
-  /* Garante que o sublinhado não apareça no hover */
 }
 
+/*----------------------------------------------------------------------*/
 /* Estilização inicial */
 .socialWeb i {
   color: inherit;
@@ -271,19 +260,6 @@ section#home.hero {
   /* efeito leve de zoom */
 }
 
-/* GitHub hover (preto) */
-/* #githubLink:hover i {
-    color: #181717;
-    /* Cor oficial do GitHub */
-/*transform: scale(1.2);
-}
-
-/* LinkedIn hover (azul) */
-/*#linkedinLink:hover i {
-    color: #0077B5;
-    /* Cor oficial do LinkedIn */
-/* transform: scale(1.2);
-}*/
 /*Estilo do modal do mapa de localização*/
 .modalMap {
   position: fixed;
@@ -482,23 +458,6 @@ section#home.hero {
 }
 
 /*-------------------------------------------------*/
-/*Nova implementação da section habilidades*/
-/*.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-    font-weight: 700;
-}*/
-/* .section-title:after {*/
-/*content: '';
-    position: absolute;*/
-/*width: 60px;
-    height: 3px;
-    background-color: var(--primary-color);*/
-/*bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}*/
 /* Estilo para as abas */
 .nav-pills .nav-link {
   margin-right: 5px;
