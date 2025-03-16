@@ -83,6 +83,13 @@ section#home.hero {
 
 .list-unstyled .contactMethod {
     transition: 0.5s ease-in-out;
+
+    &:hover {
+        font-style: 600;
+        transform: scale(1.1);
+        color: var(--highlight-color);
+        margin-left: 10px;
+    }
 }
 
 .list-unstyled .contactMethod:hover {
