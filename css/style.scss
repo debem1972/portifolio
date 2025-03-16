@@ -186,6 +186,8 @@ section#home.hero {
 
 @import "./introTexto";
 
+
+
 #logo {
     width: min(40em, 80vmin);
     height: auto;
@@ -223,7 +225,7 @@ section#home.hero {
 
 /*----------------------------------------------------------------------------*/
 /* Media queries para ajuste fino em dispositivos específicos */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
 
     #intro-text {
         font-size: 1.8rem;
@@ -251,58 +253,58 @@ section#home.hero {
         font-size: 1rem;
         padding: 0.5rem 1rem;
     }
-}
+}*/
 
 /* Ajuste para dispositivos pequenos (mobile) */
-@media (max-width: 576px) {
+/*@media (max-width: 576px) {
 
     #intro-text {
         font-size: 1.5rem;
     }
 
     /* Aumenta ainda mais o espaço quando o menu está expandido em mobile */
-    section {
+/*section {
         scroll-margin-top: 70px;
         padding-top: 3rem;
     }
 
     /* Quando o menu hamburguer está expandido, precisamos de mais espaço */
-    body.menu-expanded section {
+/*body.menu-expanded section {
         scroll-margin-top: 280px;
         /* Valor aproximado, ajuste conforme a altura do seu menu expandido */
-    }
+/*}
 
 
-}
+}*/
 
 
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
     #logo {
         /*width: min(12em, 50vmin);*/
-        width: min(16em, 70vmin);
+/*width: min(16em, 70vmin);
     }
 
     .container.text-center h1 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem !important;
         /* Reduz o espaço inferior */
-    }
+/*}
 
     .container.text-center .lead {
         font-size: 0.95rem;
         margin-bottom: 1rem !important;
         /* Reduz o espaço inferior */
-    }
+/*}
 
     .container.text-center .btn-lg {
         font-size: 0.9rem;
         padding: 0.4rem 0.8rem;
     }
-}
+}*/
 
 /* Dispositivos muito pequenos */
-@media (max-width: 320px) {
+/*@media (max-width: 320px) {
     .container.text-center h1 {
         font-size: 1.25rem;
     }
@@ -310,7 +312,7 @@ section#home.hero {
     .container.text-center .lead {
         font-size: 0.85rem;
     }
-}
+}*/
 
 
 /*--------------------------------------*/
