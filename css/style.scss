@@ -285,10 +285,6 @@ section#home.hero {
     }
 }
 
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
 
 .text-primary-custom {
     color: var(--primary-color);
@@ -300,12 +296,15 @@ section#home.hero {
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
 }
 
-.certificate-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+
 
 .certificate-preview {
     position: relative;
