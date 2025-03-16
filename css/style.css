@@ -204,18 +204,6 @@ section#home.hero {
   transform: translateX(-50%);
 }
 
-/*.section-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--primary-color);
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}*/
 .list-unstyled li {
   cursor: pointer;
 }

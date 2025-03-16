@@ -72,40 +72,10 @@ section#home.hero {
 }
 
 
-.section-title {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    font-weight: 700;
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 60px;
-        height: 3px;
-        background-color: var(--primary-color);
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+@import "./titulosSections";
 
-}
 
-/*.section-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--primary-color);
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}*/
 
 .list-unstyled li {
     cursor: pointer;
