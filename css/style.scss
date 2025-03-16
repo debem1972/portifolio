@@ -155,11 +155,13 @@ section#home.hero {
 .skill-item {
     height: 100%;
     transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
-.skill-item:hover {
-    transform: translateY(-5px);
-}
+
 
 .project-card {
     overflow: hidden;

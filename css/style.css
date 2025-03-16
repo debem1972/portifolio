@@ -281,7 +281,6 @@ section#home.hero {
   height: 100%;
   transition: transform 0.3s;
 }
-
 .skill-item:hover {
   transform: translateY(-5px);
 }
