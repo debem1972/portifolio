@@ -32,6 +32,16 @@ body {
   color: var(--primary-color);
 }
 
+/* Aumenta a especificidade para o elemento #home */
+section#home.hero {
+  /* Remove o padding-top para a seção hero, já que ela deve ocupar 100vh */
+  padding-top: 0;
+  /* Ajusta a altura para compensar o padding-top do body */
+  height: calc(100vh - 56px);
+  /* Posiciona abaixo da navbar */
+  margin-top: 0;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -237,16 +247,6 @@ section {
   /* Ajusta o scroll para compensar a navbar fixa */
   /* scroll-margin-top: 60px; */
   scroll-margin-top: 70px;
-}
-
-/* Aumenta a especificidade para o elemento #home */
-section#home.hero {
-  /* Remove o padding-top para a seção hero, já que ela deve ocupar 100vh */
-  padding-top: 0;
-  /* Ajusta a altura para compensar o padding-top do body */
-  height: calc(100vh - 56px);
-  /* Posiciona abaixo da navbar */
-  margin-top: 0;
 }
 
 .section-title {
