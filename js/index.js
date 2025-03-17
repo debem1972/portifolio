@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeSection = document.getElementById('home');
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('#navbarNav');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.navbar .nav-link'); // Ajustado aqui
 
 
     // Mostra o cursor imediatamente ao carregar a página
@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let i = 0;
     function typeWriter() {
         if (i < introText.length) {
-            //introElement.innerHTML += introText.charAt(i);
+
             introElement.innerHTML = introText.substring(0, i + 1) + '<span id="cursor"></span>';
             i++;
             setTimeout(typeWriter, 50);
         } else {
-            //introElement.innerHTML += '<span id="cursor"></span>';
+
             setTimeout(fadeOutText, 3000);   // Cursor pisca por 3s após a frase
         }
     }
@@ -55,6 +55,34 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContent.style.opacity = '1';
         navbar.style.opacity = '1';
         homeSection.style.opacity = '1';
+        // Inicia o Intersection Observer após a navbar ficar visível
+        startLinkActiveObserver();
+    }
+
+    // Função para ativar o Intersection Observer
+    function startLinkActiveObserver() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar .nav-link'); // Ajustado aqui também
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('linkActive');
+                        const href = link.getAttribute('href').substring(1);
+                        if (href === entry.target.id) {
+                            link.classList.add('linkActive');
+                            console.log(`Link ativo: ${href}`); // Depuração
+                        }
+                    });
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.5,                   //Muda o cursor a 50% da seção visível na viewport;
+            rootMargin: '-70px 0px 0px 0px'  //Compensa a altura da navbar
+        });
+
+        sections.forEach(section => observer.observe(section));
     }
 
     // Detecta o estado do menu e atualiza a classe no body
