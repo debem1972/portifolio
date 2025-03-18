@@ -289,7 +289,8 @@ section {
 #telephonLink,
 #localizationLink,
 #githubLink,
-#linkedinLink {
+#linkedinLink,
+#linkInsta {
   color: inherit;
   text-decoration: none;
 }
@@ -305,7 +306,10 @@ section {
 #githubLink:active,
 #linkedinLink:hover,
 #linkedinLink:focus,
-#linkedinLink:active {
+#linkedinLink:active,
+#linkInsta:hover,
+#linkInsta:focus,
+#linkInsta:active {
   color: inherit;
   text-decoration: none;
 }
