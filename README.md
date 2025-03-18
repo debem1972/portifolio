@@ -26,6 +26,8 @@ Este projeto foi desenvolvido com o apoio das seguintes tecnologias e recursos:
 
 ### 🎨 Recursos
 * ![Google Fonts](https://img.shields.io/badge/-Google%20Fonts-4285F4?style=flat-square&logo=googlefonts&logoColor=white) [Google Fonts](https://fonts.google.com/) - Fontes utilizadas no projeto
+* ![Photoroom](https://img.shields.io/badge/-Photoroom-9C27B0?style=flat-square&logo=photoroom&logoColor=white) [Photoroom](https://www.photoroom.com/) - Edição e remoção de fundo de imagens
+
 
 
 ### 🤖 Assistentes de IA
@@ -43,9 +45,9 @@ Este projeto foi desenvolvido com o apoio das seguintes tecnologias e recursos:
 
 ```
 📁 Arquivos: 38
-📝 Linhas de código: 2295
+📝 Linhas de código: 2297
 ⏱️ Horas de desenvolvimento: 55horas
-🔄 Commits: 76
+🔄 Commits: 77
 ```
 
 ## 📫 Entre em Contato
