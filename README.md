@@ -43,9 +43,9 @@ Este projeto foi desenvolvido com o apoio das seguintes tecnologias e recursos:
 
 ```
 📁 Arquivos: 38
-📝 Linhas de código: 2961
-⏱️ Horas de desenvolvimento: 50horas
-🔄 Commits: 64
+📝 Linhas de código: 2295
+⏱️ Horas de desenvolvimento: 55horas
+🔄 Commits: 76
 ```
 
 ## 📫 Entre em Contato
