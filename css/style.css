@@ -131,6 +131,10 @@ section#home.hero {
 /*------------------------------------------------------*/
 /* Ajuste para dispositivos pequenos (mobile) */
 @media (max-width: 576px) {
+  #intro-screen {
+    border: 2px solid red;
+    padding: 0 15px;
+  }
   #intro-text {
     font-size: 1.5rem;
   }
