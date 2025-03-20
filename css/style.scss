@@ -69,6 +69,25 @@ section {
 @import "./titulosSections";
 
 
+//Animação do status de envio da mensagem do form.
+#statusMensagem {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: -100% 50%;
+    }
+}
+
+
 
 .list-unstyled li {
     cursor: pointer;
