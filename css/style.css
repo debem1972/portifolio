@@ -8,95 +8,6 @@
   --branco-color: #fff;
 }
 
-/*Alinhando os parâmetros dos breakpoints do projeto aos parâmetros dos breakpoints do bootstrap*/
-/*------------------------------------------------------*/
-/* Ajuste para dispositivos pequenos (mobile) */
-@media (max-width: 576px) {
-  #intro-text {
-    font-size: 1.5rem;
-  }
-  /* Aumenta ainda mais o espaço quando o menu está expandido em mobile */
-  section {
-    scroll-margin-top: 70px;
-    padding-top: 3rem;
-  }
-  /* Quando o menu hamburguer está expandido, precisamos de mais espaço */
-  body.menu-expanded section {
-    scroll-margin-top: 280px;
-    /* Valor aproximado, ajuste conforme a altura do seu menu expandido */
-  }
-}
-/* Tablets (de 768px até 991px) */
-@media (min-width: 768px) {
-  .myPhoto img {
-    width: 80px;
-    height: 80px;
-  }
-  .navbar-brand {
-    font-size: 1.5rem;
-    /* 20px, um pouco maior que em mobile */
-  }
-  #intro-text {
-    font-size: 1.8rem;
-  }
-  section {
-    scroll-margin-top: 65px;
-    padding-top: 2.5rem;
-  }
-  #logo {
-    width: min(15em, 45vmin);
-  }
-  .container.text-center h1 {
-    font-size: 2rem;
-  }
-  .container.text-center .lead {
-    font-size: 1.1rem;
-  }
-  .container.text-center .btn-lg {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-}
-/* Desktops (a partir de 992px) */
-@media (min-width: 992px) {
-  .myPhoto img {
-    width: 100px;
-    height: 100px;
-  }
-  .navbar-brand {
-    font-size: 2.5rem;
-    /* 24px, maior em desktops, mas não exagerado */
-  }
-}
-@media (max-width: 480px) {
-  #logo {
-    /*width: min(12em, 50vmin);*/
-    width: min(16em, 70vmin);
-  }
-  .container.text-center h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem !important;
-    /* Reduz o espaço inferior */
-  }
-  .container.text-center .lead {
-    font-size: 0.95rem;
-    margin-bottom: 1rem !important;
-    /* Reduz o espaço inferior */
-  }
-  .container.text-center .btn-lg {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-/* Dispositivos muito pequenos */
-@media (max-width: 320px) {
-  .container.text-center h1 {
-    font-size: 1.25rem;
-  }
-  .container.text-center .lead {
-    font-size: 0.85rem;
-  }
-}
 html {
   scroll-behavior: smooth;
 }
@@ -216,6 +127,95 @@ section#home.hero {
   /* Amplia ao ativar */
 }
 
+/*Alinhando os parâmetros dos breakpoints do projeto aos parâmetros dos breakpoints do bootstrap*/
+/*------------------------------------------------------*/
+/* Ajuste para dispositivos pequenos (mobile) */
+@media (max-width: 576px) {
+  #intro-text {
+    font-size: 1.5rem;
+  }
+  /* Aumenta ainda mais o espaço quando o menu está expandido em mobile */
+  section {
+    scroll-margin-top: 70px;
+    padding-top: 3rem;
+  }
+  /* Quando o menu hamburguer está expandido, precisamos de mais espaço */
+  body.menu-expanded section {
+    scroll-margin-top: 280px;
+    /* Valor aproximado, ajuste conforme a altura do seu menu expandido */
+  }
+}
+/* Tablets (de 768px até 991px) */
+@media (min-width: 768px) {
+  .myPhoto img {
+    width: 80px;
+    height: 80px;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+    /* 20px, um pouco maior que em mobile */
+  }
+  #intro-text {
+    font-size: 1.8rem;
+  }
+  section {
+    scroll-margin-top: 65px;
+    padding-top: 2.5rem;
+  }
+  #logo {
+    width: min(15em, 45vmin);
+  }
+  .container.text-center h1 {
+    font-size: 2rem;
+  }
+  .container.text-center .lead {
+    font-size: 1.1rem;
+  }
+  .container.text-center .btn-lg {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+/* Desktops (a partir de 992px) */
+@media (min-width: 992px) {
+  .myPhoto img {
+    width: 100px;
+    height: 100px;
+  }
+  .navbar-brand {
+    font-size: 2.5rem;
+    /* 24px, maior em desktops, mas não exagerado */
+  }
+}
+@media (max-width: 480px) {
+  #logo {
+    /*width: min(12em, 50vmin);*/
+    width: min(16em, 70vmin);
+  }
+  .container.text-center h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem !important;
+    /* Reduz o espaço inferior */
+  }
+  .container.text-center .lead {
+    font-size: 0.95rem;
+    margin-bottom: 1rem !important;
+    /* Reduz o espaço inferior */
+  }
+  .container.text-center .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+/* Dispositivos muito pequenos */
+@media (max-width: 320px) {
+  .container.text-center h1 {
+    font-size: 1.25rem;
+  }
+  .container.text-center .lead {
+    font-size: 0.85rem;
+  }
+}
 /*--------------------------------------------*/
 /*Ajuste da fonte do navbar-brand*/
 /* Estilização padrão para dispositivos móveis (até 767px) */
