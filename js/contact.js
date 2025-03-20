@@ -143,7 +143,7 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
                 statusEl.style.display = 'none';
             }, 1000);
         }, 3000);
-    }, 29000); // ajuste do tempo de espera: 29 segundos
+    }, 37000); // ajuste do tempo de espera: 37 segundos
 
     // Configura e envia a requisição AJAX para o FormSubmit
     fetch('https://formsubmit.co/danielbemficadev@gmail.com', {
