@@ -11,7 +11,7 @@
 /*Alinhando os parâmetros dos breakpoints do projeto aos parâmetros dos breakpoints do bootstrap*/
 /*------------------------------------------------------*/
 /* Ajuste para dispositivos pequenos (mobile) */
-@media (max-width: breakpoints("sm")) {
+@media (max-width: 576px) {
   #intro-text {
     font-size: 1.5rem;
   }
@@ -27,7 +27,7 @@
   }
 }
 /* Tablets (de 768px até 991px) */
-@media (min-width: breakpoints("md")) {
+@media (min-width: 768px) {
   .myPhoto img {
     width: 80px;
     height: 80px;
@@ -58,7 +58,7 @@
   }
 }
 /* Desktops (a partir de 992px) */
-@media (min-width: breakpoints("lg")) {
+@media (min-width: 992px) {
   .myPhoto img {
     width: 100px;
     height: 100px;
@@ -68,7 +68,7 @@
     /* 24px, maior em desktops, mas não exagerado */
   }
 }
-@media (max-width: breakpoints("custom-sm")) {
+@media (max-width: 480px) {
   #logo {
     /*width: min(12em, 50vmin);*/
     width: min(16em, 70vmin);
@@ -89,7 +89,7 @@
   }
 }
 /* Dispositivos muito pequenos */
-@media (max-width: breakpoints("custon-xs")) {
+@media (max-width: 320px) {
   .container.text-center h1 {
     font-size: 1.25rem;
   }
@@ -97,7 +97,6 @@
     font-size: 0.85rem;
   }
 }
-/*-----------------------------------------------------*/
 html {
   scroll-behavior: smooth;
 }

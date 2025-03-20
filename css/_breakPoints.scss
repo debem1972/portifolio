@@ -18,8 +18,7 @@ $breakpoints: (
 
 /*------------------------------------------------------*/
 /* Ajuste para dispositivos pequenos (mobile) */
-@media (max-width: #{breakpoints('sm')}) {
-
+@media (max-width: #{breakpoint('sm')}) {
     #intro-text {
         font-size: 1.5rem;
     }
@@ -35,13 +34,10 @@ $breakpoints: (
         scroll-margin-top: 280px;
         /* Valor aproximado, ajuste conforme a altura do seu menu expandido */
     }
-
-
 }
 
-
 /* Tablets (de 768px até 991px) */
-@media (min-width: #{breakpoints('md')}) {
+@media (min-width: #{breakpoint('md')}) {
     .myPhoto img {
         width: 80px;
         height: 80px;
@@ -60,7 +56,6 @@ $breakpoints: (
         scroll-margin-top: 65px;
         padding-top: 2.5rem;
     }
-
 
     #logo {
         width: min(15em, 45vmin);
@@ -81,7 +76,7 @@ $breakpoints: (
 }
 
 /* Desktops (a partir de 992px) */
-@media (min-width:#{breakpoints('lg')}) {
+@media (min-width: #{breakpoint('lg')}) {
     .myPhoto img {
         width: 100px;
         height: 100px;
@@ -93,9 +88,7 @@ $breakpoints: (
     }
 }
 
-
-
-@media (max-width: #{breakpoints('custom-sm')}) {
+@media (max-width: #{breakpoint('custom-sm')}) {
     #logo {
         /*width: min(12em, 50vmin);*/
         width: min(16em, 70vmin);
@@ -120,7 +113,7 @@ $breakpoints: (
 }
 
 /* Dispositivos muito pequenos */
-@media (max-width: #{breakpoints('custon-xs')}) {
+@media (max-width: #{breakpoint('custom-xs')}) {
     .container.text-center h1 {
         font-size: 1.25rem;
     }
@@ -129,6 +122,3 @@ $breakpoints: (
         font-size: 0.85rem;
     }
 }
-
-
-/*-----------------------------------------------------*/
