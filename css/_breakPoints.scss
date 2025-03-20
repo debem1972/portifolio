@@ -18,7 +18,7 @@ $breakpoints: (
 
 /*------------------------------------------------------*/
 /* Ajuste para dispositivos pequenos (mobile) */
-@media (max-width: 'sm') {
+@media (max-width: #{$breakpoints('sm')}) {
 
     #intro-text {
         font-size: 1.5rem;
@@ -41,7 +41,7 @@ $breakpoints: (
 
 
 /* Tablets (de 768px até 991px) */
-@media (min-width:'md') {
+@media (min-width: #{$breakpoints('md')}) {
     .myPhoto img {
         width: 80px;
         height: 80px;
@@ -81,7 +81,7 @@ $breakpoints: (
 }
 
 /* Desktops (a partir de 992px) */
-@media (min-width:'lg') {
+@media (min-width:#{$breakpoints('lg')}) {
     .myPhoto img {
         width: 100px;
         height: 100px;
@@ -95,7 +95,7 @@ $breakpoints: (
 
 
 
-@media (max-width:'custom-sm') {
+@media (max-width: #{$breakpoints('custom-sm')}) {
     #logo {
         /*width: min(12em, 50vmin);*/
         width: min(16em, 70vmin);
@@ -120,7 +120,7 @@ $breakpoints: (
 }
 
 /* Dispositivos muito pequenos */
-@media (max-width:'custon-xs') {
+@media (max-width: #{$breakpoints('custon-xs')}) {
     .container.text-center h1 {
         font-size: 1.25rem;
     }
