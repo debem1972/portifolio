@@ -64,6 +64,22 @@ section {
     min-height: 100vh;
 }
 
+/* Respiro do conteúdo abaixo da navbar (não altera scroll-margin-top) */
+#sobre,
+#habilidades,
+#projetos,
+#contato {
+    > .container {
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 992px) {
+        > .container {
+            margin-top: 2rem;
+        }
+    }
+}
+
 
 
 @import "./titulosSections";

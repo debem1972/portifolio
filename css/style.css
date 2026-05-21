@@ -249,6 +249,22 @@ section {
   min-height: 100vh;
 }
 
+/* Respiro do conteúdo abaixo da navbar (não altera scroll-margin-top) */
+#sobre > .container,
+#habilidades > .container,
+#projetos > .container,
+#contato > .container {
+  margin-top: 1.5rem;
+}
+@media (min-width: 992px) {
+  #sobre > .container,
+  #habilidades > .container,
+  #projetos > .container,
+  #contato > .container {
+    margin-top: 2rem;
+  }
+}
+
 .section-title {
   position: relative;
   display: inline-block;
@@ -269,17 +285,6 @@ section {
   transform: translateX(-50%);
 }
 
-#sobre {
-  /* Respiro extra abaixo da navbar; não altera scroll-margin-top da section */
-}
-#sobre > .container {
-  margin-top: 1.5rem;
-}
-@media (min-width: 992px) {
-  #sobre > .container {
-    margin-top: 2rem;
-  }
-}
 #sobre .sobre-row {
   --sobre-altura: min(420px, 55vw);
 }
