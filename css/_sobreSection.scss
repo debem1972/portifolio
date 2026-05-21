@@ -1,4 +1,15 @@
 #sobre {
+    /* Respiro extra abaixo da navbar; não altera scroll-margin-top da section */
+    > .container {
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 992px) {
+        > .container {
+            margin-top: 2rem;
+        }
+    }
+
     .sobre-row {
         --sobre-altura: min(420px, 55vw);
 
