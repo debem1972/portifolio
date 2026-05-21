@@ -1,0 +1,19 @@
+#sobre {
+    .sobre-img {
+        width: 100%;
+        max-width: 420px;
+        object-fit: cover;
+    }
+
+    .sobre-content p {
+        line-height: 1.75;
+        color: var(--secondary-color);
+        text-align: justify;
+    }
+}
+
+@media (min-width: 992px) {
+    #sobre .sobre-content p {
+        text-align: left;
+    }
+}
